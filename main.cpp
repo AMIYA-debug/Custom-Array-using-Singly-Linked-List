@@ -78,6 +78,21 @@ class linkedlist{
               }
        }
 
+      int getvalue(int index)
+    {
+        node* temp = head;
+        if (index < 0 || index >= size)
+            return -1;
+        for (int i = 0; i <= index; i++)
+        {
+            if (i == index){
+                return temp->val;
+            }
+                
+            temp = temp->next;
+        }
+    }
+
 };
 // a demonstration of the linked list operations
 int main(){
@@ -91,5 +106,6 @@ int main(){
     l1.insertatpos(2, 15);
     l1.display();
     l1.size1();
+    cout<<l1.getvalue(2);
 
 }
